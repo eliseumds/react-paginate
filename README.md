@@ -12,13 +12,13 @@ bower install react-paginate
 
 Via NPM
 ```
-npm install react-paginate
+npm install react-paginate-component
 ```
 
 ### Usage
 
 ```js
-var Paginate = require('react-paginate');
+var Paginate = require('react-paginate'); // in Node: react-paginate-component
 
 var App = React.createClass({
 	getInitialState: function() {
