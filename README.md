@@ -3,6 +3,8 @@ react-paginate
 
 A pagination component for ReactJS using Twitter Bootstrap markup
 
+Example: http://jsfiddle.net/kb3gN/8460/
+
 ### Install
 
 Via Bower:
