@@ -1,5 +1,5 @@
 {
-  "name": "react-paginate",
+  "name": "react-paginate-component",
   "version": "0.0.1",
   "description": "A ReactJS pagination component",
   "main": "index.js",
