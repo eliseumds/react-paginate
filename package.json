@@ -1,0 +1,27 @@
+{
+  "name": "react-paginate",
+  "version": "0.0.1",
+  "description": "A ReactJS pagination component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliseumds/react-paginate.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "js",
+    "pagination",
+    "paginator",
+    "paginate"
+  ],
+  "author": "Eliseu Monar <eliseumds@gmail.com>",
+  "license": "GNU GPL v2.0",
+  "bugs": {
+    "url": "https://github.com/eliseumds/react-paginate/issues"
+  },
+  "homepage": "https://github.com/eliseumds/react-paginate"
+}
