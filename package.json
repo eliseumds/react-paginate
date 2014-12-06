@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/eliseumds/react-paginate/issues"
   },
-  "homepage": "https://github.com/eliseumds/react-paginate"
+  "homepage": "https://github.com/eliseumds/react-paginate",
+  "dependencies": {
+    "react": "^0.12.1"
+  }
 }
