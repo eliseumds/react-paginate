@@ -29,18 +29,23 @@
                 items: []
             };
         },
-        goTo: function(page) {
+        goTo: function(page, e) {
+            if(e){
+              e.preventDefault();
+            }
             this.setState({currentPage: page});
         },
 
-        onClickNext: function() {
+        onClickNext: function(e) {
+            e.preventDefault();
             var page = this.state.currentPage;
 
             if (page < this.props.max) {
                 this.goTo(page + 1);
             }
         },
-        onClickPrev: function() {
+        onClickPrev: function(e) {
+            e.preventDefault();
             if (this.state.currentPage > 1) {
                 this.goTo(this.state.currentPage - 1);
             }
@@ -62,26 +67,26 @@
             });
 
             return (
-                React.createElement("nav", null, 
-                    React.createElement("ul", {className: 'pagination ' + className}, 
-                        React.createElement("li", {className: s.currentPage === 1 ? 'disabled' : ''}, 
-                            React.createElement("a", {href: "#", onClick: this.onClickPrev}, 
-                                React.createElement("span", {'aria-hidden': "true"}, "«"), 
+                React.createElement("nav", null,
+                    React.createElement("ul", {className: 'pagination ' + className},
+                        React.createElement("li", {className: s.currentPage === 1 ? 'disabled' : ''},
+                            React.createElement("a", {href: "#", onClick: this.onClickPrev},
+                                React.createElement("span", {'aria-hidden': "true"}, "«"),
                                 React.createElement("span", {className: "sr-only"}, "Prev")
                             )
-                        ), 
+                        ),
                         iterator.map(function(page) {
                             return (
-                                React.createElement("li", {key: page, 
-                                    onClick: this.goTo.bind(this, page), 
-                                    className: s.currentPage === page ? 'active' : ''}, 
+                                React.createElement("li", {key: page,
+                                    onClick: this.goTo.bind(this, page),
+                                    className: s.currentPage === page ? 'active' : ''},
                                     React.createElement("a", {href: "#"}, page)
                                 )
                             );
-                        }, this), 
-                        React.createElement("li", {className: s.currentPage === p.max ? 'disabled' : ''}, 
-                            React.createElement("a", {href: "#", onClick: this.onClickNext}, 
-                                React.createElement("span", {'aria-hidden': "true"}, "»"), 
+                        }, this),
+                        React.createElement("li", {className: s.currentPage === p.max ? 'disabled' : ''},
+                            React.createElement("a", {href: "#", onClick: this.onClickNext},
+                                React.createElement("span", {'aria-hidden': "true"}, "»"),
                                 React.createElement("span", {className: "sr-only"}, "Next")
                             )
                         )

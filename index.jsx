@@ -29,18 +29,23 @@
                 items: []
             };
         },
-        goTo: function(page) {
+        goTo: function(page,e) {
+            if(e){
+              e.preventDefault();
+            }
             this.setState({currentPage: page});
         },
 
-        onClickNext: function() {
+        onClickNext: function(e) {
+            e.preventDefault();
             var page = this.state.currentPage;
 
             if (page < this.props.max) {
                 this.goTo(page + 1);
             }
         },
-        onClickPrev: function() {
+        onClickPrev: function(e) {
+            e.preventDefault();
             if (this.state.currentPage > 1) {
                 this.goTo(this.state.currentPage - 1);
             }
