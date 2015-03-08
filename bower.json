@@ -1,7 +1,7 @@
 {
   "name": "react-paginate",
   "main": "index.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/eliseumds/react-paginate",
   "authors": [
     "Eliseu Monar <eliseumds@gmail.com>"
